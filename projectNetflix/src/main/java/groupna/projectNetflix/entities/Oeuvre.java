@@ -63,5 +63,22 @@ public class Oeuvre {
 	public void setRate(double rate) {
 		this.rate = rate;
 	}
-	
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public List<Categorie> getCat() {
+		return cat;
+	}
+	public void setCat(List<Categorie> cat) {
+		this.cat = cat;
+	}
+	public String getURLann() {
+		return URLann;
+	}
+	public void setURLann(String uRLann) {
+		URLann = uRLann;
+	}
 }
