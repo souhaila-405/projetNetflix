@@ -8,14 +8,18 @@ public class User {
 	private String prenom;
 	private String email;
 	private String mdp;
+	private Role role;
 	private Set<Oeuvre> favs;
 	private Set<Oeuvre> his;
-	public User(int id, String nom, String prenom, String email, String mdp, Set<Oeuvre> favs, Set<Oeuvre> his) {
-		this.setId(id);
+	public User(int id, String nom, String prenom, String email, String mdp, Role role, Set<Oeuvre> favs,
+			Set<Oeuvre> his) {
+		super();
+		this.id = id;
 		this.nom = nom;
 		this.prenom = prenom;
 		this.email = email;
 		this.mdp = mdp;
+		this.setRole(role);
 		this.favs = favs;
 		this.his = his;
 	}
@@ -60,5 +64,11 @@ public class User {
 	}
 	public void setId(int id) {
 		this.id = id;
+	}
+	public Role getRole() {
+		return role;
+	}
+	public void setRole(Role role) {
+		this.role = role;
 	}
 }

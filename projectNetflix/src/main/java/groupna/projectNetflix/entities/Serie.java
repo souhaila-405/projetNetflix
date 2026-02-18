@@ -5,20 +5,20 @@ import java.util.List;
 import java.util.Map;
 
 public class Serie extends Oeuvre{
-	private Map<Integer,List<Episode>> saisons;
-	private int hassen;
+	private Map<saison,List<Episode>> saisons;
 
-	public Serie(String resume, Categorie cat, String titre, LocalDate dateDeSortie, List<Artiste> acteurs,
-			List<Artiste> directeurs, double rate, Map<Integer, List<Episode>> saisons) {
-		super(resume, cat, titre, dateDeSortie, acteurs, directeurs, rate);
+	public Serie(int id, String resume, List<Categorie> cat, String titre, LocalDate dateDeSortie,
+			List<Artiste> acteurs, List<Artiste> directeurs, double rate, String uRLann,
+			Map<saison, List<Episode>> saisons) {
+		super(id, resume, cat, titre, dateDeSortie, acteurs, directeurs, rate, uRLann);
 		this.saisons = saisons;
 	}
 
-	public Map<Integer, List<Episode>> getSaisons() {
+	public Map<saison, List<Episode>> getSaisons() {
 		return saisons;
 	}
 
-	public void setSaisons(Map<Integer, List<Episode>> saisons) {
+	public void setSaisons(Map<saison, List<Episode>> saisons) {
 		this.saisons = saisons;
 	}
 	

@@ -6,16 +6,18 @@ import java.util.List;
 public class Oeuvre {
 	protected int id;
 	protected String resume;
-	protected Categorie cat;
+	protected List<Categorie> cat;
 	protected String titre;
 	protected LocalDate DateDeSortie;
 	protected List<Artiste> acteurs;
 	protected List<Artiste> Directeurs;
 	protected double rate;
+	protected String URLann;
 	
-	public Oeuvre(String resume, Categorie cat, String titre, LocalDate dateDeSortie, List<Artiste> acteurs,
-			List<Artiste> directeurs, double rate) {
+	public Oeuvre(int id, String resume, List<Categorie> cat, String titre, LocalDate dateDeSortie,
+			List<Artiste> acteurs, List<Artiste> directeurs, double rate, String uRLann) {
 		super();
+		this.id = id;
 		this.resume = resume;
 		this.cat = cat;
 		this.titre = titre;
@@ -23,18 +25,13 @@ public class Oeuvre {
 		this.acteurs = acteurs;
 		Directeurs = directeurs;
 		this.rate = rate;
+		URLann = uRLann;
 	}
 	public String getResume() {
 		return resume;
 	}
 	public void setResume(String resume) {
 		this.resume = resume;
-	}
-	public Categorie getCat() {
-		return cat;
-	}
-	public void setCat(Categorie cat) {
-		this.cat = cat;
 	}
 	public String getTitre() {
 		return titre;
@@ -65,11 +62,6 @@ public class Oeuvre {
 	}
 	public void setRate(double rate) {
 		this.rate = rate;
-	}
-	@Override
-	public String toString() {
-		return "Oeuvre [resume=" + resume + ", cat=" + cat + ", titre=" + titre + ", DateDeSortie=" + DateDeSortie
-				+ ", acteurs=" + acteurs + ", Directeurs=" + Directeurs + ", rate=" + rate + "]";
 	}
 	
 }

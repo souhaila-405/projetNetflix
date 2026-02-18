@@ -7,10 +7,14 @@ public class Episode {
 	private String resume;
 	private String Titre;
 	private LocalTime duree;
-	public Episode(String resume, String titre, LocalTime duree) {
+	private String URLann;
+	private String URL;
+	public Episode(String resume, String titre, LocalTime duree,String URLann,String URL) {
 		this.resume = resume;
 		Titre = titre;
 		this.duree = duree;
+		this.URLann=URLann;
+		this.setURL(URL);
 	}
 	public String getResume() {
 		return resume;
@@ -39,6 +43,18 @@ public class Episode {
 	}
 	public void setId(int id) {
 		this.id = id;
+	}
+	public String getURLann() {
+		return URLann;
+	}
+	public void setURLann(String uRLann) {
+		URLann = uRLann;
+	}
+	public String getURL() {
+		return URL;
+	}
+	public void setURL(String uRL) {
+		URL = uRL;
 	}
 	
 }

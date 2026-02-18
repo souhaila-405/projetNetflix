@@ -6,11 +6,12 @@ import java.util.List;
 
 public class Film extends Oeuvre {
 	private LocalTime duree;
-
-	public Film(String resume, Categorie cat, String titre, LocalDate dateDeSortie, List<Artiste> acteurs,
-			List<Artiste> directeurs, double rate, LocalTime duree) {
-		super(resume, cat, titre, dateDeSortie, acteurs, directeurs, rate);
+	private String URL;
+	public Film(int id, String resume, List<Categorie> cat, String titre, LocalDate dateDeSortie, List<Artiste> acteurs,
+			List<Artiste> directeurs, double rate, String uRLann, LocalTime duree, String uRL) {
+		super(id, resume, cat, titre, dateDeSortie, acteurs, directeurs, rate, uRLann);
 		this.duree = duree;
+		URL = uRL;
 	}
 
 	public LocalTime getDuree() {
@@ -19,5 +20,13 @@ public class Film extends Oeuvre {
 
 	public void setDuree(LocalTime duree) {
 		this.duree = duree;
+	}
+
+	public String getURL() {
+		return URL;
+	}
+
+	public void setURL(String uRL) {
+		URL = uRL;
 	}
 }
